@@ -26,6 +26,7 @@ const App = () => {
   const[moviesList,setMoviesList] = useState([])
   const[loading,setLoading] = useState(false)
   const[debounceValue,setDebounceValue]=useState('')
+  
   useDebounce(()=>setDebounceValue(searchValue),500,[searchValue])
   const fetchMovies = async (query = '') =>{
     setLoading(true)
@@ -42,7 +43,6 @@ const App = () => {
       }
       setMoviesList(data.results || []);
       if (query && data.results.length > 0) {
-        alert("Updating search count for: " + query); 
         await updateSearchCount(query, data.results[0]);
       }
     }catch(error){
@@ -64,9 +64,9 @@ const App = () => {
 
         <div className='wrapper'>
 <header className="mt-0 flex flex-col items-center gap-4">
-  {/* <img src="./../public/hero-img.png" alt="Hero Banner" className="mt-[-100px] " /> */}
+  {/* <img src="/hero-img.png" alt="Hero Banner" className="mt-[-100px] " /> */}
   <img
-  src="./../public/hero-img.png"
+  src="/hero-img.png"
   alt="Hero Banner"
   className="w-[160px] sm:w-[200px] md:w-[240px] h-auto mt-[-10px] mb-10"
 />
