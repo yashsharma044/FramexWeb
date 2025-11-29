@@ -1,11 +1,29 @@
-steps to setup in local : 
+🎬 FramexWeb
 
-1. git clone
-2. npm install
-3. create .env.local file in your local system
-   VITE_TMDB_API_KEY=
-   VITE_BASE_URL=
+FramexWeb is a movie discovery web application powered by the TMDB API.
+Follow the steps below to run the project on your local machine.
 
-   you can get these api keys from tmdb movie api 
-4. npm run dev
-   
+🚀 Local Setup
+1️⃣ Clone the repository
+git clone <repo-url>
+cd FramexWeb
+
+2️⃣ Install dependencies
+npm install
+
+3️⃣ Add environment variables
+
+Create a file named .env.local in the root directory and add the following keys:
+
+VITE_TMDB_API_KEY=
+VITE_BASE_URL=
+
+
+🔑 You can get these API keys from the TMDB Movie API dashboard.
+
+4️⃣ Start the development server
+npm run dev
+
+
+If everything is set up correctly, FramexWeb will now be running locally 🎉
+Happy coding! 💻🔥
